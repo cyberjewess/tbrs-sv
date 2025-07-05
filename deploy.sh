@@ -28,6 +28,10 @@ fi
 
 echo "✅ Docker environment check passed"
 
+# Take down application
+echo "Taking down app..."
+docker-compose down
+
 # Build the application
 echo "🔨 Building the application..."
 npm run build
@@ -35,6 +39,10 @@ npm run build
 # Build Docker image
 echo "🐳 Building Docker image..."
 docker build -t tbrs-app .
+
+# Build compose
+echo "Building compose..."
+docker-compose build
 
 # Start the application
 echo "🚀 Starting the application with Docker Compose..."
