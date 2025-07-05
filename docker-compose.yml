@@ -23,3 +23,15 @@ services:
       timeout: 10s
       retries: 3
       start_period: 40s 
+  # Hook exposed port onto web
+  cloudflared:
+    image: cloudflare/cloudflared:latest
+    depends_on:
+      - nginx
+    profiles:
+      - prod
+    restart: unless-stopped
+    command: "tunnel --no-autoupdate run --token ${TUNNEL_TOKEN} --url 'http://localhost:8090'"
+    env_file:
+      - .env
+    network_mode: "host" # Ensures it can connect to services on localhost
