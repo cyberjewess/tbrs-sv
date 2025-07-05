@@ -14,6 +14,5 @@ export interface Song {
 	title: string;
 	artist?: string;
 	category: 'kabbalat-shabbat' | 'other-shabbat' | 'nigunim' | 'yiddish' | 'other';
-	externalLink?: string;
-	playlistLink?: string;
+	externalLink: string;
 }
