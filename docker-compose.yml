@@ -27,7 +27,7 @@ services:
   cloudflared:
     image: cloudflare/cloudflared:latest
     depends_on:
-      - nginx
+      - tbrs-app
     profiles:
       - prod
     restart: unless-stopped
