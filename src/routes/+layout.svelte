@@ -5,10 +5,10 @@
 </script>
 
 <div class="navbar">
-	<button><a href="/">Home</a></button>
-	<button><a href="/archive/">Archive</a></button>
-	<button><a href="/calendar/">Calendar</a></button>
-	<button><a href="/nusach/">Nusach</a></button>
+	<a href="/" class="button">Home</a>
+	<a href="/archive/" class="button">Archive</a>
+	<a href="/calendar/" class="button">Calendar</a>
+	<a href="/nusach/" class="button">Nusach</a>
 </div>
 
 <main>

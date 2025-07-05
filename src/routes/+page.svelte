@@ -3,31 +3,23 @@
 
 	<div class="upcoming">
 		<h2>Upcoming: Shabbos @ Esti on Friday, July 11.</h2>
-		<h3 class="event-link">
-			<a target="_blank" href="/rsvp"> RSVP Form </a>
-		</h3>
-		<h3 class="event-link">
-			<a target="_blank" href="/plan"> Potluck Spreadsheet </a>
-		</h3>
+		<div class="event-links">
+			<h3 class="event-link">
+				<a target="_blank" href="/rsvp"> RSVP Form </a>
+			</h3>
+			<h3 class="event-link">
+				<a target="_blank" href="/plan"> Potluck Spreadsheet </a>
+			</h3>
+		</div>
 		<h2>Services 6:30pm. Potluck dinner 7:30pm.</h2>
 	</div>
 
 	<div class="principles">
-		An intergenerational Jewish community.
-		<br />
-		<br />
-		We are Liberationist Diasporist Anarchist <strong>dreamers.</strong>
-		<br />
-		<br />
-		We are Anti-Zionist Anti-Implerialist Anti-Colonialist <strong>fighters.</strong>
-		<br />
-		<br />
-		We do monthly trad-egal style Shabbos services <strong>with a potluck dinner.</strong>
-		<br />
-		<br />
-		In order to rest, renew, and connect.
-		<br />
-		<br />
+		<p>An intergenerational Jewish community.</p>
+		<p>We are Liberationist Diasporist Anarchist <strong>dreamers.</strong></p>
+		<p>We are Anti-Zionist Anti-Implerialist Anti-Colonialist <strong>fighters.</strong></p>
+		<p>We do monthly trad-egal style Shabbos services <strong>with a potluck dinner.</strong></p>
+		<p>In order to rest, renew, and connect.</p>
 	</div>
 
 	<div class="footnote">

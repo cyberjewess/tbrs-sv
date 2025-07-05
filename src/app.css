@@ -22,21 +22,36 @@
 a {
     color: #FFF;
     text-decoration: none;
+    cursor: pointer;
 }
 
 button {
     border-radius: 10px;
-    border: 2px solid #E81E00;
+    border: 1px solid #E81E00;
     box-shadow: 4px 5px 0px 0px rgba(0, 0, 0, 0.2);
     margin-right: 10px;
-    padding: 8px 16px;
+    padding: 2px 4px;
     background-color: #2518D2;
-    color: #FFAB00;
     cursor: pointer;
     transition: all 0.2s ease;
 }
 
-button:hover {
+
+
+a.button {
+    border-radius: 10px;
+    border: 1px solid #E81E00;
+    box-shadow: 4px 5px 0px 0px rgba(0, 0, 0, 0.2);
+    margin-right: 10px;
+    padding: 2px 4px;
+    background-color: #2518D2;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-decoration: none;
+    display: inline-block;
+}
+
+a.button:hover {
     background-color: #E81E00;
     color: #2518D2;
 }
@@ -77,14 +92,32 @@ h3 {
 
 .upcoming {
     display: inline-block;
+    background-color: #1a0f9e;
+    border-radius: 10px;
+    box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.10);
+    text-align: center;
+}
+
+.upcoming * {
+    background: inherit !important;
 }
 
 .footnote {
     font-size: 10px;
 }
 
+.event-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 24px;
+    margin-bottom: 10px;
+}
+
 .event-link {
-    padding-left: 2em;
+    text-align: left;
+    width: auto;
+    max-width: 350px;
 }
 
 /* Calendar styles */
@@ -119,4 +152,8 @@ article li {
 
 .redirect-link.large {
     font-size: 100px;
+}
+
+.principles p {
+    margin-bottom: 1.2em;
 }
