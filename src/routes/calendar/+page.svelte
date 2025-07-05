@@ -1,13 +1,15 @@
-<article>
-	<h1>Upcoming</h1>
+<h1>Upcoming</h1>
+<div class="calendar-card">
 	<ul>
 		<li class="mystical">Moshiach arrives</li>
 		<li>...</li>
 		<li>Sat 8/2/25 ~ Erev Tisha B'Av</li>
 		<li>Fri 7/11/25 ~ Shabbos @ Esti</li>
 	</ul>
+</div>
 
-	<h1>Past</h1>
+<h1>Past</h1>
+<div class="calendar-card">
 	<ul>
 		<li>Tue 6/24/25 ~ Election Day (update: Zohran won!)</li>
 		<li>Fri 6/20/25 ~ Shabbos @ Esti</li>
@@ -40,4 +42,4 @@
 		<li>...</li>
 		<li class="mystical">Creation of the universe</li>
 	</ul>
-</article>
+</div>
