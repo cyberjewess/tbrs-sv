@@ -21,8 +21,8 @@ This guide shows how to deploy the TBRS SvelteKit app on a Raspberry Pi using Do
    ```
 
 3. **Access the app:**
-   - Open your browser to `http://your-pi-ip:8089`
-   - The app will be available on port 8089
+   - Open your browser to `http://your-pi-ip:8090`
+   - The app will be available on port 8090
 
 ## Docker Commands
 
@@ -33,7 +33,7 @@ docker build -t tbrs-app .
 
 ### Run the container:
 ```bash
-docker run -p 8089:3000 tbrs-app
+docker run -p 8090:3000 tbrs-app
 ```
 
 ### View logs:
@@ -69,7 +69,7 @@ environment:
 To change the port, modify the `ports` section in `docker-compose.yml`:
 ```yaml
 ports:
-  - "8089:3000"  # Maps host port 8089 to container port 3000
+  - "8090:3000"  # Maps host port 8090 to container port 3000
 ```
 
 ## Resource Limits

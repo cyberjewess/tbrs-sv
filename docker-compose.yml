@@ -4,7 +4,7 @@ services:
   tbrs-app:
     build: .
     ports:
-      - "8089:3000"
+      - "8090:3000"
     environment:
       - NODE_ENV=production
       - PORT=3000
