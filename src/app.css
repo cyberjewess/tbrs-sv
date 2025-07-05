@@ -157,3 +157,7 @@ article li {
 .principles p {
     margin-bottom: 1.2em;
 }
+
+.centered-title {
+    text-align: center;
+}
