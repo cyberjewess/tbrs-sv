@@ -1,4 +1,6 @@
-/* Global styles - clean and simple */
+/* =====================
+   Global Styles & Reset
+   ===================== */
 * {
     font-family: "Georgia";
     background-color: #2518D2;
@@ -6,58 +8,26 @@
     font-size: 24px;
 }
 
-/* Mobile responsive */
-@media only screen and (max-width: 600px) {
-    body {
-        font-size: 18px;
-        padding: 10px;
-    }
+/* =====================
+   Layout & Containers
+   ===================== */
+.home,
+.content {
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 20px;
 }
 
-/* Custom classes */
-.mystical {
-    color: #000 !important;
+.navbar {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
 }
 
-a {
-    color: #FFF;
-    text-decoration: none;
-    cursor: pointer;
-    border-bottom: 1px solid #E81E00;
-}
-
-button {
-    border-radius: 10px;
-    border: 1px solid #E81E00;
-    box-shadow: 4px 5px 0px 0px rgba(0, 0, 0, 0.2);
-    margin-right: 10px;
-    padding: 2px 4px;
-    background-color: #2518D2;
-    cursor: pointer;
-    transition: all 0.2s ease;
-}
-
-
-
-a.button {
-    border-radius: 10px;
-    border: 1px solid #E81E00;
-    box-shadow: 4px 5px 0px 0px rgba(0, 0, 0, 0.2);
-    margin-right: 10px;
-    padding: 2px 4px;
-    background-color: #2518D2;
-    cursor: pointer;
-    transition: all 0.2s ease;
-    text-decoration: none;
-    display: inline-block;
-}
-
-a.button:hover {
-    background-color: #E81E00;
-    color: #2518D2;
-}
-
-/* Typography */
+/* =====================
+   Typography
+   ===================== */
 h1 {
     text-align: center;
     font-size: 48px;
@@ -73,25 +43,21 @@ h3 {
     padding: 15px;
 }
 
-/* Layout classes */
-.navbar {
-    margin-bottom: 20px;
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-}
-
-.home,
-.content {
-    max-width: 850;
-    margin: 0 auto;
-    padding: 20px;
-}
-
 .principles {
     margin-top: 20px;
 }
 
+.principles p {
+    margin-bottom: 1.2em;
+}
+
+.footnote {
+    font-size: 10px;
+}
+
+/* =====================
+   Components & Sections
+   ===================== */
 .upcoming {
     display: inline-block;
     background-color: #1a0f9e;
@@ -102,10 +68,6 @@ h3 {
 
 .upcoming * {
     background: inherit !important;
-}
-
-.footnote {
-    font-size: 10px;
 }
 
 .event-links {
@@ -156,11 +118,61 @@ article li {
     font-size: 100px;
 }
 
-.principles p {
-    margin-bottom: 1.2em;
+/* =====================
+   Buttons & Links
+   ===================== */
+a {
+    color: #FFF;
+    text-decoration: none;
+    cursor: pointer;
+    border-bottom: 1px solid #E81E00;
 }
 
-@media (max-width: 600px) {
+button {
+    border-radius: 10px;
+    border: 1px solid #E81E00;
+    box-shadow: 4px 5px 0px 0px rgba(0, 0, 0, 0.2);
+    margin-right: 10px;
+    padding: 2px 4px;
+    background-color: #2518D2;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+a.button {
+    border-radius: 10px;
+    border: 1px solid #E81E00;
+    box-shadow: 4px 5px 0px 0px rgba(0, 0, 0, 0.2);
+    margin-right: 10px;
+    padding: 2px 4px;
+    background-color: #2518D2;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-decoration: none;
+    display: inline-block;
+}
+
+a.button:hover {
+    background-color: #E81E00;
+    color: #2518D2;
+}
+
+/* =====================
+   Utilities & Helpers
+   ===================== */
+.mystical {
+    color: #000 !important;
+}
+
+/* =====================
+   Responsive / Media Queries
+   ===================== */
+@media only screen and (max-width: 600px) {
+    body {
+        font-size: 18px;
+        padding: 10px;
+    }
+
     .event-links {
         flex-direction: column;
         gap: 10px;
