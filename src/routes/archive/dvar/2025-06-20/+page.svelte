@@ -1,6 +1,9 @@
 <div class="home">
-	<h1>Dvar Torah - Parshat Shlakh</h1>
-	<h2>June 20, 2025 - Daniel W</h2>
+	<h1>
+		<a class="archive-link" href="/archive/">Archive</a>
+		/ <a class="archive-link" href="/archive/dvar/">Divrei Torah</a>
+		/ June 20, 2025 - Parshat Shlakh, Daniel W
+	</h1>
 
 	<ol>
 		<li>
