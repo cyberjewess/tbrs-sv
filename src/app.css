@@ -19,10 +19,10 @@
 }
 
 .navbar {
-    margin-bottom: 20px;
     display: flex;
     justify-content: center;
     gap: 10px;
+    margin-bottom: 20px;
 }
 
 /* =====================
@@ -171,6 +171,33 @@ a.button:hover {
     body {
         font-size: 18px;
         padding: 10px;
+    }
+
+    h1 {
+        font-size: 2.2rem;
+    }
+
+    h2 {
+        font-size: 1.4rem;
+        padding: 10px;
+    }
+
+    h3 {
+        font-size: 1.1rem;
+        padding: 8px;
+    }
+
+    .upcoming,
+    .calendar-card {
+        padding: 12px 6px;
+        max-width: 98vw;
+    }
+
+    .navbar {
+        max-width: 98vw;
+        margin: 0 auto 20px auto;
+        flex-wrap: wrap;
+        gap: 8px;
     }
 
     .event-links {
