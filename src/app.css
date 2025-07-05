@@ -84,6 +84,11 @@ h3 {
     max-width: 350px;
 }
 
+.section-divider {
+    margin: 0 auto;
+    width: 50vw;
+}
+
 /* Calendar styles */
 article {
     max-width: 800px;
