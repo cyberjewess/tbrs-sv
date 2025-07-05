@@ -12,5 +12,7 @@
 </div>
 
 <main>
-	{@render children()}
+	<div class="content">
+		{@render children()}
+	</div>
 </main>

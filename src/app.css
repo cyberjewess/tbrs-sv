@@ -23,6 +23,7 @@ a {
     color: #FFF;
     text-decoration: none;
     cursor: pointer;
+    border-bottom: 1px solid #E81E00;
 }
 
 button {
@@ -58,6 +59,7 @@ a.button:hover {
 
 /* Typography */
 h1 {
+    text-align: center;
     font-size: 48px;
 }
 
@@ -156,8 +158,4 @@ article li {
 
 .principles p {
     margin-bottom: 1.2em;
-}
-
-.centered-title {
-    text-align: center;
 }
