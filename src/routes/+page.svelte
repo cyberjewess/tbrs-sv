@@ -2,7 +2,7 @@
 	<h1>You are at the Bushwick / Ridgewood Shul.</h1>
 
 	<div class="upcoming">
-		<h2>Upcoming: Shabbos @ Esti on Friday, July 11.</h2>
+		<h2>Shabbos @ Esti on Friday, July 11.</h2>
 		<div class="event-links">
 			<h3 class="event-link">
 				<a target="_blank" href="/rsvp"> RSVP Form </a>
