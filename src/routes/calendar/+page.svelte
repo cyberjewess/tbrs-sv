@@ -44,6 +44,7 @@
 		{ date: '2025-02-21', title: 'Shabbos @ Esti', isShabbos: true },
 		{ date: '2025-01-10', title: 'Shabbos @ Esti', isShabbos: true },
 		// Mystical/past
+		{ date: '0070-08-03', title: '...', isMystical: true, hideDate: true },
 		{
 			date: '0070-08-02',
 			title: '9 Av 3830 ~ Destruction of the Second Temple',
@@ -52,7 +53,6 @@
 			externalLink:
 				'https://www.chabad.org/library/article_cdo/aid/2641925/jewish/Which-Year-Was-the-Second-Temple-Destroyed-69-CE-or-70-CE.htm'
 		},
-		{ date: '0001-01-03', title: '...', isMystical: true, hideDate: true },
 		{
 			date: '0001-01-02',
 			title: '9 Av 3338 ~ Destruction of the First Temple',
