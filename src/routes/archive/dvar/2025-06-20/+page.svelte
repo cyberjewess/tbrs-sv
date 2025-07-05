@@ -1,9 +1,6 @@
 <div class="home">
-	<a class="archive-link" href="/archive/dvar/">Divrei Torah</a>
-	<h1>Parshat Shlakh</h1>
-	<h2>Daniel W</h2>
-	<h3>June 20, 2025</h3>
-
+	<h1 class="centered">Parshat Shlakh</h1>
+	<h2 class="centered">Daniel W - June 20, 2025</h2>
 	<ol>
 		<li>
 			<strong>Stories</strong>

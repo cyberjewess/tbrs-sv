@@ -55,6 +55,10 @@ h3 {
     font-size: 10px;
 }
 
+.centered {
+    text-align: center;
+}
+
 /* =====================
    Components & Sections
    ===================== */

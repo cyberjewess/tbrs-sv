@@ -1,9 +1,6 @@
 <div class="home">
-	<a class="archive-link" href="/archive/dvar/">Divrei Torah</a>
-	<h1>Parshat Emor</h1>
-	<h2>Francesca R</h2>
-	<h3>May 16, 2025</h3>
-
+	<h1 class="centered">Parshat Emor</h1>
+	<h2 class="centered">Francesca R - May 16, 2025</h2>
 	<p>
 		Hello everyone, I'm Francesca. I've enjoyed getting to be a part of the Bushwick-Ridgewood shul
 		community over the last few months, thanks for welcoming me tonight. Just about a year ago, I
