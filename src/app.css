@@ -59,6 +59,7 @@ h3 {
 /* Layout classes */
 .navbar {
     margin-bottom: 20px;
+    text-align: center;
 }
 
 .home,
