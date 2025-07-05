@@ -84,11 +84,6 @@ h3 {
     max-width: 350px;
 }
 
-.section-divider {
-    margin: 0 auto;
-    width: 50vw;
-}
-
 /* Calendar styles */
 article {
     max-width: 800px;
@@ -124,6 +119,8 @@ article li {
 }
 
 .archive-link {
+    display: inline-block;
+    width: 100%;
     color: #FFAB00;
     font-size: 32px;
     font-weight: bold;
@@ -131,6 +128,7 @@ article li {
     text-decoration-color: #E81E00;
     text-underline-offset: 6px;
     text-decoration-thickness: 3px;
+    text-align: center;
     border: none;
     background: none;
     cursor: pointer;
