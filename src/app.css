@@ -88,6 +88,39 @@ h3 {
     max-width: 350px;
 }
 
+/* EventList styles */
+.event-item {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0.5em;
+}
+
+.event-date {
+    font-size: 0.9em;
+    color: #ccc;
+    margin-bottom: 0.2em;
+}
+
+.event-title {
+    padding-left: 1.5em;
+}
+
+@media (min-width: 601px) {
+    .event-item {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .event-date {
+        margin-bottom: 0;
+    }
+
+    .event-title {
+        padding-left: 0;
+        margin-left: 1.5em;
+    }
+}
+
 /* Calendar styles */
 article {
     max-width: 800px;
@@ -138,7 +171,6 @@ article li {
     cursor: pointer;
 }
 
-
 /* =====================
    Buttons & Links
    ===================== */
@@ -146,7 +178,10 @@ a {
     color: #FFF;
     text-decoration: none;
     cursor: pointer;
-    border-bottom: 1px solid #E81E00;
+    text-decoration: underline;
+    text-decoration-color: #E81E00;
+    text-underline-offset: 3px;
+    text-decoration-thickness: 1px;
 }
 
 button {

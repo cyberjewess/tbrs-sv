@@ -18,16 +18,25 @@
 
 <ul>
 	{#each events as event}
-		<li class={event.isMystical ? 'mystical' : ''}>
-			{#if event.externalLink}
-				<a target="_blank" href={event.externalLink}>
-					{#if event.hideDate}{event.title}{:else}{formatDate(event.date)} ~ {event.title}{/if}
-				</a>
-			{:else if event.isShabbos}
-				<strong>
-					{#if event.hideDate}{event.title}{:else}{formatDate(event.date)} ~ {event.title}{/if}
-				</strong>
-			{:else if event.hideDate}{event.title}{:else}{formatDate(event.date)} ~ {event.title}{/if}
+		<li>
+			<div class="event-item">
+				{#if !event.hideDate}
+					<div class="event-date{event.isMystical ? ' mystical' : ''}">
+						{formatDate(event.date)}
+					</div>
+				{/if}
+				{#if event.externalLink}
+					<div class="event-title{event.isMystical ? ' mystical' : ''}">
+						<a target="_blank" href={event.externalLink}>{event.title}</a>
+					</div>
+				{:else if event.isShabbos}
+					<div class="event-title{event.isMystical ? ' mystical' : ''}">
+						<strong>{event.title}</strong>
+					</div>
+				{:else}
+					<div class="event-title{event.isMystical ? ' mystical' : ''}">{event.title}</div>
+				{/if}
+			</div>
 		</li>
 	{/each}
 </ul>
