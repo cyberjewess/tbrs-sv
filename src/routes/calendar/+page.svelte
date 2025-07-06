@@ -1,5 +1,4 @@
 <script lang="ts">
-	import type { Event } from '$lib/types';
 	import { events } from '$lib/data/events';
 	import EventList from '$lib/EventList.svelte';
 

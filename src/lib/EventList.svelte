@@ -1,18 +1,14 @@
 <script lang="ts">
 	import type { Event } from '$lib/types';
+	import { parse, format } from 'date-fns';
 
 	export let events: Event[];
 
 	// Format date for display (e.g., "Fri 7/11/25")
 	function formatDate(dateStr: string): string {
-		const date = new Date(dateStr);
-		const days = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
-		const dayName = days[date.getDay()];
-		const month = date.getMonth() + 1;
-		const day = date.getDate();
-		const year = date.getFullYear().toString().slice(-2);
-
-		return `${dayName} ${month}/${day}/${year}`;
+		// Parse as local date (YYYY-MM-DD)
+		const date = parse(dateStr, 'yyyy-MM-dd', new Date());
+		return format(date, 'EEE M/d/yy'); // e.g., Sat 8/2/25
 	}
 </script>
 
