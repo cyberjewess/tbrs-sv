@@ -25,17 +25,15 @@
 						{formatDate(event.date)}
 					</div>
 				{/if}
-				{#if event.externalLink}
-					<div class="event-title{event.isMystical ? ' mystical' : ''}">
+				<div class="event-title{event.isMystical ? ' mystical' : ''}">
+					{#if event.externalLink}
 						<a target="_blank" href={event.externalLink}>{event.title}</a>
-					</div>
-				{:else if event.isShabbos}
-					<div class="event-title{event.isMystical ? ' mystical' : ''}">
+					{:else if event.isShabbos}
 						<strong>{event.title}</strong>
-					</div>
-				{:else}
-					<div class="event-title{event.isMystical ? ' mystical' : ''}">{event.title}</div>
-				{/if}
+					{:else}
+						{event.title}
+					{/if}
+				</div>
 			</div>
 		</li>
 	{/each}
