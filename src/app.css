@@ -299,3 +299,39 @@ a.button:hover {
     padding: 5px 0;
     list-style: none;
 }
+
+/* Vote card style */
+.vote-card {
+    background-color: #1a0f9e;
+    border-radius: 10px;
+    box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.10);
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 30px 20px;
+}
+
+.vote-card+.vote-card {
+    margin-top: 40px;
+}
+
+.vote-card * {
+    background-color: inherit;
+}
+
+.vote-card ul {
+    text-align: left;
+    margin: 0 auto;
+    max-width: 700px;
+    padding-left: 0;
+}
+
+.vote-card li {
+    color: #fff;
+    border-radius: inherit;
+    box-shadow: inherit;
+    margin: 40px auto;
+    padding: 30px 20px;
+    width: fit-content;
+    list-style: none;
+
+}
