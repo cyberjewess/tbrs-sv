@@ -19,14 +19,12 @@
 	<div class="upcoming">
 		<h2>Shabbos @ Esti on {shabbosDate}.</h2>
 		<div class="event-links">
-			<!---
 			<h3 class="event-link">
 				<a target="_blank" href="/rsvp"> RSVP Form </a>
 			</h3>
 			<h3 class="event-link">
 				<a target="_blank" href="/plan"> Potluck Spreadsheet </a>
 			</h3>
-			--->
 		</div>
 		<h2>Services 6:30pm. Potluck dinner 8:00pm.</h2>
 		<div>
