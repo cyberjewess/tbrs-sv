@@ -2,6 +2,8 @@
 	import { events, todayISO } from '$lib/data/events';
 	import EventList from '$lib/EventList.svelte';
 
+	const today = todayISO();
+
 	const upcomingEvents = events
 		.filter((e) => e.date >= today)
 		.sort((a, b) => b.date.localeCompare(a.date));
