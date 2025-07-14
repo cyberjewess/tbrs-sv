@@ -1,12 +1,5 @@
 <script lang="ts">
-	import { events } from '$lib/data/events';
-
-	// Helper to get today's date at midnight
-	function todayISO(): string {
-		const now = new Date();
-		now.setHours(0, 0, 0, 0);
-		return now.toISOString().slice(0, 10);
-	}
+	import { events, toDate, todayISO } from '$lib/data/events';
 
 	const today = todayISO();
 
@@ -15,19 +8,7 @@
 		.sort((a, b) => b.date.localeCompare(a.date));
 	const nextShabbos = upcomingEvents.filter((e) => e.isShabbos).pop();
 	const nextEvent = upcomingEvents.filter((e) => !e.isShabbos).pop();
-	const toDate = (s?: string) => {
-		if (s) {
-			return (
-				'on ' +
-				new Date(s ?? '').toLocaleDateString('en-US', {
-					year: 'numeric',
-					month: 'long',
-					day: 'numeric'
-				})
-			);
-		}
-		return 'TBA';
-	};
+
 	const shabbosDate = toDate(nextShabbos?.date);
 	const eventDate = toDate(nextEvent?.date);
 </script>
