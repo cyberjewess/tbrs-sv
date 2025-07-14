@@ -1,5 +1,26 @@
 import type { Event } from '../types';
 
+// Helper to get today's date at midnight
+export function todayISO(): string {
+	const now = new Date();
+	now.setHours(0, 0, 0, 0);
+	return now.toISOString().slice(0, 10);
+}
+
+export function toDate(s?: string): string {
+	if (s) {
+		return (
+			'on ' +
+			new Date(s ?? '').toLocaleDateString('en-US', {
+				year: 'numeric',
+				month: 'long',
+				day: 'numeric'
+			})
+		);
+	}
+	return 'TBA';
+};
+
 export const events: Event[] = [
 	// Future/Upcoming
 	{ date: '9999-12-31', title: 'Moshiach arrives', isMystical: true, hideDate: true },
