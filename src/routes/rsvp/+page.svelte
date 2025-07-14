@@ -13,6 +13,6 @@
 <div class="redirect-page">
 	<a class="redirect-link" target="_blank" href={link}>
 		<h3>Click if not automatically redirected</h3>
-		<h3>Shabbos RSVP July 11</h3>
+		<h3>Shabbos RSVP August 15</h3>
 	</a>
 </div>

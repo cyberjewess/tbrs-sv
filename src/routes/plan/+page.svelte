@@ -19,6 +19,6 @@
 		href={link}
 	>
 		<h3>Click if not automatically redirected</h3>
-		<h3>Shabbos Potluck Planning July 11</h3>
+		<h3>Shabbos Potluck Planning August 15</h3>
 	</a>
 </div>
