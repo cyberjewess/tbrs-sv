@@ -11,10 +11,7 @@ bump-major:
 	@scripts/bump-version.sh major
 
 toggle-dev:
-	@current=$$(grep -E 'const developerMode = (true|false);' src/routes/+layout.svelte | grep -oE '(true|false)'); \
-	new=$$(if [ "$$current" = "true" ]; then echo "false"; else echo "true"; fi); \
-	echo "🔁 Toggling developerMode: $$current → $$new"; \
-	sed -i '' "s/const developerMode = $$current;/const developerMode = $$new;/" src/routes/+layout.svelte
+	@scripts/toggle-dev.sh
 
 .PHONY: get-version bump-patch bump-minor bump-major toggle-dev
 
