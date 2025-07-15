@@ -3,9 +3,12 @@
 
 	let { children } = $props();
 
-	const version = '1.0.25';
+	const version = '0.1.0';
 	console.log('Welcome to tbrs.nyc');
 	console.log('v', version);
+
+	// Toggle developer mode
+	const developerMode = true;
 </script>
 
 <div class="navbar">
@@ -14,6 +17,9 @@
 	<a href="/calendar/" class="button">Calendar</a>
 	<a href="/nusach/" class="button">Nusach</a>
 	<a href="/archive/" class="button">Archive</a>
+	{#if developerMode}
+		<a href="/events/" class="button">Events WIP</a>
+	{/if}
 </div>
 
 <main>
