@@ -2,6 +2,10 @@
 	import '../app.css';
 
 	let { children } = $props();
+
+	const version = '1.0.25';
+	console.log('Welcome to tbrs.nyc');
+	console.log('v', version);
 </script>
 
 <div class="navbar">
