@@ -9,13 +9,16 @@ export function todayISO(): string {
 
 export function toDate(s?: string): string {
 	if (s) {
-		return (
-			'on ' +
-			new Date(s ?? '').toLocaleDateString('en-US', {
+		const r = new Date(s ?? '');
+		console.log(r);
+		console.log(
+		r.toLocaleDateString('en-US', {
 				year: 'numeric',
 				month: 'long',
 				day: 'numeric'
-			})
+			}));
+		return (
+			'on ' + r
 		);
 	}
 	return 'TBA';
