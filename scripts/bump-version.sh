@@ -41,3 +41,7 @@ sed -i '' "s/version[[:space:]]*=[[:space:]]*['\"]$version['\"][[:space:]]*;/ver
 
 echo "✅ Version updated in $FILE"
 
+git add $FILE
+git commit -m "Bumped to $version"
+
+git tag $version

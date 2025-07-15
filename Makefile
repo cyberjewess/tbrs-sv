@@ -10,7 +10,6 @@ bump-minor:
 bump-major:
 	@scripts/bump-version.sh major
 
-
 toggle-dev:
 	@current=$$(grep -E 'const developerMode = (true|false);' src/routes/+layout.svelte | grep -oE '(true|false)'); \
 	new=$$(if [ "$$current" = "true" ]; then echo "false"; else echo "true"; fi); \
