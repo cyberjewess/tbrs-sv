@@ -8,21 +8,20 @@ export function todayISO(): string {
 }
 
 export function toDate(s?: string): string {
-	if (s) {
-		const r = new Date(s ?? '');
-		console.log(r);
-		console.log(
-		r.toLocaleDateString('en-US', {
-				year: 'numeric',
-				month: 'long',
-				day: 'numeric'
-			}));
-		return (
-			'on ' + r
-		);
+	if (s === undefined) {
+		return "TBA";
 	}
-	return 'TBA';
-};
+	const [y, m, d] = s
+		.split("-")
+		.map((a) => Number.parseInt(a));
+	const r = new Date(y, m - 1, d);
+	return 'on ' + r.toLocaleDateString('en-US', {
+		year: 'numeric',
+		month: 'long',
+		day: 'numeric'
+	});
+}
+
 
 export const events: Event[] = [
 	// Future/Upcoming
