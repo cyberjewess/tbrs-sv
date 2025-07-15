@@ -8,7 +8,7 @@
 	console.log('v', version);
 
 	// Toggle developer mode
-	const developerMode = true;
+	const developerMode = false;
 </script>
 
 <div class="navbar">
