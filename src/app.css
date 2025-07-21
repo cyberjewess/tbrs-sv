@@ -172,6 +172,11 @@ article li {
     cursor: pointer;
 }
 
+.archive-big {
+    padding: 20px 32px;
+    font-size: 1.1em;
+}
+
 /* =====================
    Buttons & Links
    ===================== */
@@ -212,6 +217,11 @@ a.button {
 a.button:hover {
     background-color: #E81E00;
     color: #2518D2;
+}
+
+a.button.archive-big {
+    padding: 20px 32px;
+    font-size: 1.1em;
 }
 
 /* =====================
@@ -335,4 +345,11 @@ a.button:hover {
     width: fit-content;
     list-style: none;
 
+}
+
+.link-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
 }

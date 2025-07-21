@@ -1,3 +1,4 @@
+<a href="/archive" class="archive-link">Archive</a>
 <div class="home">
 	<h1>It's almost the end of the seder!</h1>
 	<p>
