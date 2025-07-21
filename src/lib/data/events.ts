@@ -9,19 +9,19 @@ export function todayISO(): string {
 
 export function toDate(s?: string): string {
 	if (s === undefined) {
-		return "TBA";
+		return 'TBA';
 	}
-	const [y, m, d] = s
-		.split("-")
-		.map((a) => Number.parseInt(a));
+	const [y, m, d] = s.split('-').map((a) => Number.parseInt(a));
 	const r = new Date(y, m - 1, d);
-	return 'on ' + r.toLocaleDateString('en-US', {
-		year: 'numeric',
-		month: 'long',
-		day: 'numeric'
-	});
+	return (
+		'on ' +
+		r.toLocaleDateString('en-US', {
+			year: 'numeric',
+			month: 'long',
+			day: 'numeric'
+		})
+	);
 }
-
 
 export const events: Event[] = [
 	// Future/Upcoming
@@ -33,11 +33,12 @@ export const events: Event[] = [
 	{ date: '2025-10-06', title: 'Erev Sukkot' },
 	{ date: '2025-10-01', title: 'Erev Yom Kippur' },
 	{ date: '2025-09-22', title: 'Erev Rosh Hashana' },
+	{ date: '2025-08-30', title: 'Havdalah @ ???', isShabbos: true },
 	{ date: '2025-08-15', title: 'Shabbos @ Esti', isShabbos: true },
 	{ date: '2025-08-09', title: "Tu B'Av" },
 	{ date: '2025-08-02', title: "Erev Tisha B'Av" },
-	{ date: '2025-07-11', title: 'Shabbos @ Esti', isShabbos: true },
 	// Past
+	{ date: '2025-07-11', title: 'Shabbos @ Esti', isShabbos: true },
 	{ date: '2025-06-24', title: 'Election Day (update: Zohran won!)' },
 	{ date: '2025-06-20', title: 'Shabbos @ Esti', isShabbos: true },
 	{ date: '2025-06-14', title: 'Primary Early Voting begins' },
