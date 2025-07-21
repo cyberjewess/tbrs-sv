@@ -43,7 +43,7 @@ echo "✅ Version updated in $FILE"
 
 git add $FILE
 git commit -m "Bumped to $new_version"
-
 git tag "v$new_version"
+
 git push  # push commit
 git push origin "v$new_version" # push tag
