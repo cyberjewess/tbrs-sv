@@ -172,10 +172,7 @@ article li {
     cursor: pointer;
 }
 
-.archive-big {
-    padding: 20px 32px;
-    font-size: 1.1em;
-}
+
 
 /* =====================
    Buttons & Links
@@ -253,6 +250,16 @@ a.button.archive-big {
         font-size: 1.1rem;
         padding: 8px;
     }
+
+    a.button {
+        font-size: 0.8em;
+    }
+
+    a.button.archive-big {
+        padding: 10px 16px;
+        font-size: 0.8em;
+    }
+
 
     .upcoming,
     .calendar-card {
