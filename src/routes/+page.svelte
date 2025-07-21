@@ -14,7 +14,7 @@
 </script>
 
 <div class="home">
-	<h1>You are at the Bushwick / Ridgewood Shul.</h1>
+	<h1>You are at the Bushwick Ridgewood Shul.</h1>
 
 	<div class="upcoming">
 		<h2>Shabbos @ Esti on {shabbosDate}.</h2>
