@@ -9,11 +9,11 @@
 <p class="centered">Put it in the box.</p>
 <div class="vote-card">
 	<ul>
-		<li>
+		<!-- <li>
 			<a href={form.link} class="button">
 				<pre>{form.display}</pre>
 			</a>
-		</li>
+		</li> -->
 	</ul>
 </div>
 
@@ -22,7 +22,9 @@
 <div class="vote-card">
 	<ul>
 		<li>
-			<h4>Naming vote will be in August.</h4>
+			<a href="/name" class="button">
+				<pre>Name our community!</pre>
+			</a>
 		</li>
 	</ul>
 </div>
