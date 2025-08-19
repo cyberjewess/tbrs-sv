@@ -24,9 +24,10 @@ export function toDate(s?: string): string {
 }
 
 export const events: Event[] = [
-	// Future/Upcoming
+	// Far future
 	{ date: '9999-12-31', title: 'Moshiach arrives', isMystical: true, hideDate: true },
 	{ date: '9999-12-30', title: '...', isMystical: true, hideDate: true },
+	// Current events
 	{ date: '2025-12-14', title: 'Erev Hanukkah' },
 	{ date: '2025-10-14', title: 'Erev Simchat Torah' },
 	{ date: '2025-10-13', title: 'Erev Shemini Atzeret' },
@@ -37,7 +38,6 @@ export const events: Event[] = [
 	{ date: '2025-08-15', title: 'Shabbos @ Esti', isShabbos: true },
 	{ date: '2025-08-09', title: "Tu B'Av" },
 	{ date: '2025-08-02', title: "Erev Tisha B'Av" },
-	// Past
 	{ date: '2025-07-11', title: 'Shabbos @ Esti', isShabbos: true },
 	{ date: '2025-06-24', title: 'Election Day (update: Zohran won!)' },
 	{ date: '2025-06-20', title: 'Shabbos @ Esti', isShabbos: true },
@@ -58,7 +58,7 @@ export const events: Event[] = [
 	},
 	{ date: '2025-02-21', title: 'Shabbos @ Esti', isShabbos: true },
 	{ date: '2025-01-10', title: 'Shabbos @ Esti', isShabbos: true },
-	// Mystical/past
+	// Ancient Past
 	{ date: '0070-08-03', title: '...', isMystical: true, hideDate: true },
 	{
 		date: '0070-08-02',
