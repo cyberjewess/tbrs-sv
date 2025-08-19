@@ -9,7 +9,11 @@
 	const nextShabbos = upcomingEvents.filter((e) => e.isShabbos).pop();
 	const nextEvent = upcomingEvents.filter((e) => !e.isShabbos).pop();
 
+	// Extract shabbos text because the isShabbos flag just makes it a top level event
+	// It could be a Havdalah as on 8/30/25
+	const shabbosText = nextShabbos?.title ?? "Error! Let Esti know" 
 	const shabbosDate = toDate(nextShabbos?.date);
+
 	const eventDate = toDate(nextEvent?.date);
 </script>
 
@@ -17,7 +21,7 @@
 	<h1>You are at the Bushwick Ridgewood Shul.</h1>
 
 	<div class="upcoming">
-		<h2>Shabbos @ Esti on {shabbosDate}.</h2>
+		<h2>{shabbosText} on {shabbosDate}.</h2>
 		<div class="event-links">
 			<h3 class="event-link">
 				<a target="_blank" href="/rsvp"> RSVP Form </a>

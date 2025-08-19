@@ -9,7 +9,8 @@
 <p class="centered">Put it in the box.</p>
 <div class="vote-card">
 	<ul>
-		<!-- <li>
+		<!-- Name suggestions ended, keeping as example
+		<li>
 			<a href={form.link} class="button">
 				<pre>{form.display}</pre>
 			</a>
@@ -21,10 +22,11 @@
 <p class="centered">Like your life depends on it.</p>
 <div class="vote-card">
 	<ul>
+		<!-- Name vote ended, keeping as example
 		<li>
 			<a href="/name" class="button">
 				<pre>Name our community!</pre>
 			</a>
-		</li>
+		</li> -->
 	</ul>
 </div>
