@@ -3,7 +3,7 @@
 
 	let { children } = $props();
 
-	const version = '0.2.1';
+	const version = '0.2.2';
 	console.log('Welcome to tbrs.nyc');
 	console.log('v', version);
 
