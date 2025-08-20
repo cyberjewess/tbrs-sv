@@ -34,7 +34,7 @@ export const events: Event[] = [
 	{ date: '2025-10-06', title: 'Erev Sukkot' },
 	{ date: '2025-10-01', title: 'Erev Yom Kippur' },
 	{ date: '2025-09-22', title: 'Erev Rosh Hashana' },
-	{ date: '2025-08-30', title: 'Havdalah @ ???', isShabbos: true },
+	{ date: '2025-08-30', title: 'Havdalah @ Irving Sq. Park', isShabbos: true },
 	{ date: '2025-08-15', title: 'Shabbos @ Esti', isShabbos: true },
 	{ date: '2025-08-09', title: "Tu B'Av" },
 	{ date: '2025-08-02', title: "Erev Tisha B'Av" },
