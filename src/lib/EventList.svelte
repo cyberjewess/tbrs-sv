@@ -24,7 +24,7 @@
 				<div class="event-title{event.isMystical ? ' mystical' : ''}">
 					{#if event.externalLink}
 						<a target="_blank" href={event.externalLink}>{event.title}</a>
-					{:else if event.isShabbos}
+					{:else if event.isHeadline}
 						<strong>{event.title}</strong>
 					{:else}
 						{event.title}

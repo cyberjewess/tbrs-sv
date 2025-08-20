@@ -4,7 +4,7 @@ export interface Event {
 	date: string; // ISO 8601 date string for sorting/comparison
 	title: string;
 	description?: string;
-	isShabbos?: boolean;
+	isHeadline?: boolean;
 	isMystical?: boolean;
 	externalLink?: string;
 	hideDate?: boolean; // For events like Moshiach, temples, creation

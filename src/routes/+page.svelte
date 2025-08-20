@@ -6,22 +6,22 @@
 	const upcomingEvents = events
 		.filter((e) => e.date >= today)
 		.sort((a, b) => b.date.localeCompare(a.date));
-	const nextShabbos = upcomingEvents.filter((e) => e.isShabbos).pop();
-	const nextEvent = upcomingEvents.filter((e) => !e.isShabbos).pop();
+	const headlineEvent = upcomingEvents.filter((e) => e.isHeadline).pop();
+	const otherEvent = upcomingEvents.filter((e) => !e.isHeadline).pop();
 
 	// Extract shabbos text because the isShabbos flag just makes it a top level event
 	// It could be a Havdalah as on 8/30/25
-	const shabbosText = nextShabbos?.title ?? 'Error! Let Esti know';
-	const shabbosDate = toDate(nextShabbos?.date);
+	const headlineText = headlineEvent?.title ?? 'Error! Let Esti know';
+	const headlineDate = toDate(headlineEvent?.date);
 
-	const eventDate = toDate(nextEvent?.date);
+	const otherDate = toDate(otherEvent?.date);
 </script>
 
 <div class="home">
 	<h1>You are at the Bushwick Ridgewood Shul.</h1>
 
 	<div class="upcoming">
-		<h2>{shabbosText} on {shabbosDate}.</h2>
+		<h2>{headlineText} on {headlineDate}.</h2>
 		<div class="event-links">
 			<h3 class="event-link">
 				<a target="_blank" href="/rsvp"> RSVP Form </a>
@@ -30,10 +30,10 @@
 				<a target="_blank" href="/potluck"> Potluck Spreadsheet </a>
 			</h3>
 		</div>
-		<h2>Services 6:30pm. Potluck dinner 8:00pm.</h2>
+		<h2>Eating, learning, and singing beginning at 6:30pm. Shabbat ends at 8:13pm.</h2>
 		<div>
-			{#if nextEvent}
-				<h3 class="mystical">{nextEvent.title} {eventDate}</h3>
+			{#if otherEvent}
+				<h3 class="mystical">{otherEvent.title} {otherDate}</h3>
 			{/if}
 		</div>
 	</div>
