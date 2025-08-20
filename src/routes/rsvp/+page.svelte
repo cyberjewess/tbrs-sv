@@ -1,8 +1,7 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 
-	const link =
-		'https://docs.google.com/spreadsheets/d/1vDMRb8MIKSB56HxzfjWuAV0IgZWBG_Sj3NiMc83qN6I/edit?usp=sharing';
+	const link = 'https://forms.gle/NwPwEniuCtaBvpbs9';
 
 	onMount(() => {
 		setTimeout(() => {
