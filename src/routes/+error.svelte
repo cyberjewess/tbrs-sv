@@ -15,7 +15,7 @@
 	const is404 = errorStatus === 404;
 
 	// Get the pathname that caused the 404
-	const pathname = $page.url.pathname;
+	const pathname = $page.url.pathname.slice(1);
 </script>
 
 <div class="home">
@@ -27,6 +27,7 @@
 				<h2 class="centered">We don't have "{pathname}" here.</h2>
 			</div>
 		</div>
+		<h4 class="centered">Let Esti know if it should be here!</h4>
 	{:else}
 		<div class="centered">
 			<div class="upcoming">
@@ -34,7 +35,7 @@
 				<p class="centered">Error {errorStatus}: {errorMessage}</p>
 			</div>
 		</div>
-	{/if}
 
-	<h4 class="centered">If this keeps happening, let Esti know!</h4>
+		<h4 class="centered">If this keeps happening, let Esti know!</h4>
+	{/if}
 </div>
