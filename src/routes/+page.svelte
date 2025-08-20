@@ -11,7 +11,7 @@
 
 	// Extract shabbos text because the isShabbos flag just makes it a top level event
 	// It could be a Havdalah as on 8/30/25
-	const shabbosText = nextShabbos?.title ?? "Error! Let Esti know" 
+	const shabbosText = nextShabbos?.title ?? 'Error! Let Esti know';
 	const shabbosDate = toDate(nextShabbos?.date);
 
 	const eventDate = toDate(nextEvent?.date);
@@ -27,7 +27,7 @@
 				<a target="_blank" href="/rsvp"> RSVP Form </a>
 			</h3>
 			<h3 class="event-link">
-				<a target="_blank" href="/plan"> Potluck Spreadsheet </a>
+				<a target="_blank" href="/potluck"> Potluck Spreadsheet </a>
 			</h3>
 		</div>
 		<h2>Services 6:30pm. Potluck dinner 8:00pm.</h2>
