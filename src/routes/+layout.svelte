@@ -26,4 +26,5 @@
 	<div class="content">
 		{@render children()}
 	</div>
+	<p style="font-size: 10px;">{version}</p>
 </main>
