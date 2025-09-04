@@ -4,7 +4,7 @@ services:
   tbrs-app:
     build: .
     ports:
-      - "8090:3000"
+      - '8090:3000'
     environment:
       - NODE_ENV=production
       - PORT=3000
@@ -18,11 +18,11 @@ services:
           cpus: '0.5'
     # Health check to ensure the app is running
     healthcheck:
-      test: ["CMD", "wget", "--no-verbose", "--tries=1", "--spider", "http://localhost:3000"]
+      test: ['CMD', 'wget', '--no-verbose', '--tries=1', '--spider', 'http://localhost:3000']
       interval: 30s
       timeout: 10s
       retries: 3
-      start_period: 40s 
+      start_period: 40s
   # Hook exposed port onto web
   cloudflared:
     image: cloudflare/cloudflared:latest
@@ -34,4 +34,4 @@ services:
     command: "tunnel --no-autoupdate run --token ${TUNNEL_TOKEN} --url 'http://localhost:8090'"
     env_file:
       - .env
-    network_mode: "host" # Ensures it can connect to services on localhost
+    network_mode: 'host' # Ensures it can connect to services on localhost

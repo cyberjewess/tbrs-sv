@@ -2,10 +2,10 @@
    Global Styles & Reset
    ===================== */
 * {
-    font-family: "Georgia";
-    background-color: #2518D2;
-    color: #FFAB00;
-    font-size: 24px;
+	font-family: 'Georgia';
+	background-color: #2518d2;
+	color: #ffab00;
+	font-size: 24px;
 }
 
 /* =====================
@@ -13,350 +13,346 @@
    ===================== */
 .home,
 .content {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 5px;
+	max-width: 800px;
+	margin: 0 auto;
+	padding: 5px;
 }
 
 .navbar {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    margin-bottom: 20px;
+	display: flex;
+	justify-content: center;
+	gap: 10px;
+	margin-bottom: 20px;
 }
 
 /* =====================
    Typography
    ===================== */
 h1 {
-    text-align: center;
-    font-size: 48px;
-    text-shadow: 2px 2px #E81E00;
+	text-align: center;
+	font-size: 48px;
+	text-shadow: 2px 2px #e81e00;
 }
 
 h2 {
-    font-size: 32px;
-    padding: 20px;
+	font-size: 32px;
+	padding: 20px;
 }
 
 h3 {
-    font-size: 26px;
-    padding: 15px;
+	font-size: 26px;
+	padding: 15px;
 }
 
 .principles {
-    margin-top: 20px;
+	margin-top: 20px;
 }
 
 .principles p {
-    margin-bottom: 1.2em;
+	margin-bottom: 1.2em;
 }
 
 .footnote {
-    font-size: 10px;
+	font-size: 10px;
 }
 
 .centered {
-    text-align: center;
+	text-align: center;
 }
 
 /* =====================
    Components & Sections
    ===================== */
 .upcoming {
-    display: inline-block;
-    background-color: #1a0f9e;
-    border-radius: 10px;
-    box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.10);
-    text-align: center;
+	display: inline-block;
+	background-color: #1a0f9e;
+	border-radius: 10px;
+	box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
+	text-align: center;
 }
 
 .upcoming * {
-    background: inherit !important;
+	background: inherit !important;
 }
 
 .event-links {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    gap: 24px;
-    margin-bottom: 10px;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	gap: 24px;
+	margin-bottom: 10px;
 }
 
 .event-link {
-    text-align: left;
-    width: auto;
-    max-width: 350px;
+	text-align: left;
+	width: auto;
+	max-width: 350px;
 }
 
 /* EventList styles */
 .event-item {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 0.5em;
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 0.5em;
 }
 
 .event-date {
-    font-size: 0.9em;
-    color: #ccc;
-    margin-bottom: 0.2em;
+	font-size: 0.9em;
+	color: #ccc;
+	margin-bottom: 0.2em;
 }
 
 .event-title {
-    padding-left: 1.5em;
+	padding-left: 1.5em;
 }
 
 @media (min-width: 601px) {
-    .event-item {
-        flex-direction: row;
-        align-items: center;
-    }
+	.event-item {
+		flex-direction: row;
+		align-items: center;
+	}
 
-    .event-date {
-        margin-bottom: 0;
-    }
+	.event-date {
+		margin-bottom: 0;
+	}
 
-    .event-title {
-        padding-left: 0;
-        margin-left: 1.5em;
-    }
+	.event-title {
+		padding-left: 0;
+		margin-left: 1.5em;
+	}
 }
 
 /* Calendar styles */
 article {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
+	max-width: 800px;
+	margin: 0 auto;
+	padding: 20px;
 }
 
 article ul {
-    list-style: none;
-    padding: 0;
+	list-style: none;
+	padding: 0;
 }
 
 article li {
-    margin-bottom: 10px;
-    padding: 5px 0;
+	margin-bottom: 10px;
+	padding: 5px 0;
 }
 
 /* Redirect page styles */
 .redirect-page {
-    text-align: center;
-    padding: 50px;
+	text-align: center;
+	padding: 50px;
 }
 
 .redirect-link {
-    font-size: 60px;
-    font-family: sans-serif;
-    color: #FFF;
-    text-decoration: none;
+	font-size: 60px;
+	font-family: sans-serif;
+	color: #fff;
+	text-decoration: none;
 }
 
 .redirect-link.large {
-    font-size: 100px;
+	font-size: 100px;
 }
 
 .archive-link {
-    display: inline-block;
-    width: 100%;
-    color: #FFAB00;
-    font-size: 32px;
-    font-weight: bold;
-    text-decoration: underline;
-    text-decoration-color: #E81E00;
-    text-underline-offset: 6px;
-    text-decoration-thickness: 3px;
-    text-align: center;
-    border: none;
-    background: none;
-    cursor: pointer;
+	display: inline-block;
+	width: 100%;
+	color: #ffab00;
+	font-size: 32px;
+	font-weight: bold;
+	text-decoration: underline;
+	text-decoration-color: #e81e00;
+	text-underline-offset: 6px;
+	text-decoration-thickness: 3px;
+	text-align: center;
+	border: none;
+	background: none;
+	cursor: pointer;
 }
-
-
 
 /* =====================
    Buttons & Links
    ===================== */
 a {
-    color: #FFF;
-    text-decoration: none;
-    cursor: pointer;
-    text-decoration: underline;
-    text-decoration-color: #E81E00;
-    text-underline-offset: 3px;
-    text-decoration-thickness: 1px;
+	color: #fff;
+	text-decoration: none;
+	cursor: pointer;
+	text-decoration: underline;
+	text-decoration-color: #e81e00;
+	text-underline-offset: 3px;
+	text-decoration-thickness: 1px;
 }
 
 button {
-    border-radius: 10px;
-    border: 1px solid #E81E00;
-    box-shadow: 4px 5px 0px 0px rgba(0, 0, 0, 0.2);
-    margin-right: 10px;
-    padding: 2px 4px;
-    background-color: #2518D2;
-    cursor: pointer;
-    transition: all 0.2s ease;
+	border-radius: 10px;
+	border: 1px solid #e81e00;
+	box-shadow: 4px 5px 0px 0px rgba(0, 0, 0, 0.2);
+	margin-right: 10px;
+	padding: 2px 4px;
+	background-color: #2518d2;
+	cursor: pointer;
+	transition: all 0.2s ease;
 }
 
 a.button {
-    border-radius: 10px;
-    border: 1px solid #E81E00;
-    box-shadow: 4px 5px 0px 0px rgba(0, 0, 0, 0.2);
-    margin-right: 10px;
-    padding: 2px 4px;
-    background-color: #2518D2;
-    cursor: pointer;
-    transition: all 0.2s ease;
-    text-decoration: none;
-    display: inline-block;
+	border-radius: 10px;
+	border: 1px solid #e81e00;
+	box-shadow: 4px 5px 0px 0px rgba(0, 0, 0, 0.2);
+	margin-right: 10px;
+	padding: 2px 4px;
+	background-color: #2518d2;
+	cursor: pointer;
+	transition: all 0.2s ease;
+	text-decoration: none;
+	display: inline-block;
 }
 
 a.button:hover {
-    background-color: #E81E00;
-    color: #2518D2;
+	background-color: #e81e00;
+	color: #2518d2;
 }
 
 a.button.archive-big {
-    padding: 20px 32px;
-    font-size: 1.1em;
+	padding: 20px 32px;
+	font-size: 1.1em;
 }
 
 /* =====================
    Utilities & Helpers
    ===================== */
 .mystical {
-    color: #d946ef !important;
+	color: #d946ef !important;
 }
 
 /* =====================
    Responsive / Media Queries
    ===================== */
 @media only screen and (max-width: 600px) {
-    body {
-        font-size: 18px;
-        padding: 10px;
-    }
+	body {
+		font-size: 18px;
+		padding: 10px;
+	}
 
-    h1 {
-        font-size: 1.8rem;
-    }
+	h1 {
+		font-size: 1.8rem;
+	}
 
-    h2 {
-        font-size: 1.4rem;
-        padding: 10px;
-    }
+	h2 {
+		font-size: 1.4rem;
+		padding: 10px;
+	}
 
-    h3 {
-        font-size: 1.1rem;
-        padding: 8px;
-    }
+	h3 {
+		font-size: 1.1rem;
+		padding: 8px;
+	}
 
-    a.button {
-        font-size: 0.8em;
-    }
+	a.button {
+		font-size: 0.8em;
+	}
 
-    a.button.archive-big {
-        padding: 10px 16px;
-        font-size: 0.8em;
-    }
+	a.button.archive-big {
+		padding: 10px 16px;
+		font-size: 0.8em;
+	}
 
+	.upcoming,
+	.calendar-card {
+		padding: 12px 6px;
+		max-width: 98vw;
+	}
 
-    .upcoming,
-    .calendar-card {
-        padding: 12px 6px;
-        max-width: 98vw;
-    }
+	.navbar {
+		max-width: 80vw;
+		margin: 0 auto 20px auto;
+		flex-wrap: wrap;
+		gap: 8px;
+	}
 
-    .navbar {
-        max-width: 80vw;
-        margin: 0 auto 20px auto;
-        flex-wrap: wrap;
-        gap: 8px;
-    }
+	.event-links {
+		flex-direction: column;
+		gap: 10px;
+	}
 
-    .event-links {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .event-link {
-        margin-left: auto;
-        margin-right: auto;
-        width: fit-content;
-        text-align: center;
-    }
+	.event-link {
+		margin-left: auto;
+		margin-right: auto;
+		width: fit-content;
+		text-align: center;
+	}
 }
 
 /* Calendar card styles */
 .calendar-card {
-    background-color: #1a0f9e;
-    border-radius: 10px;
-    box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.10);
-    max-width: 800px;
-    margin: 40px auto;
-    padding: 30px 20px;
+	background-color: #1a0f9e;
+	border-radius: 10px;
+	box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
+	max-width: 800px;
+	margin: 40px auto;
+	padding: 30px 20px;
 }
 
-.calendar-card+.calendar-card {
-    margin-top: 40px;
+.calendar-card + .calendar-card {
+	margin-top: 40px;
 }
 
 .calendar-card * {
-    background-color: inherit !important;
+	background-color: inherit !important;
 }
 
 .calendar-card ul {
-    text-align: left;
-    margin: 0 auto;
-    max-width: 700px;
-    padding-left: 0;
+	text-align: left;
+	margin: 0 auto;
+	max-width: 700px;
+	padding-left: 0;
 }
 
 .calendar-card li {
-    margin-bottom: 10px;
-    padding: 5px 0;
-    list-style: none;
+	margin-bottom: 10px;
+	padding: 5px 0;
+	list-style: none;
 }
 
 /* Vote card style */
 .vote-card {
-    background-color: #1a0f9e;
-    border-radius: 10px;
-    box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.10);
-    max-width: 800px;
-    margin: 40px auto;
-    padding: 30px 20px;
+	background-color: #1a0f9e;
+	border-radius: 10px;
+	box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
+	max-width: 800px;
+	margin: 40px auto;
+	padding: 30px 20px;
 }
 
-.vote-card+.vote-card {
-    margin-top: 40px;
+.vote-card + .vote-card {
+	margin-top: 40px;
 }
 
 .vote-card * {
-    background-color: inherit;
+	background-color: inherit;
 }
 
 .vote-card ul {
-    text-align: left;
-    margin: 0 auto;
-    max-width: 700px;
-    padding-left: 0;
+	text-align: left;
+	margin: 0 auto;
+	max-width: 700px;
+	padding-left: 0;
 }
 
 .vote-card li {
-    color: #fff;
-    border-radius: inherit;
-    box-shadow: inherit;
-    margin: 40px auto;
-    padding: 30px 20px;
-    width: fit-content;
-    list-style: none;
-
+	color: #fff;
+	border-radius: inherit;
+	box-shadow: inherit;
+	margin: 40px auto;
+	padding: 30px 20px;
+	width: fit-content;
+	list-style: none;
 }
 
 .link-list {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 16px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 16px;
 }

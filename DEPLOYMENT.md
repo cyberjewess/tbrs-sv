@@ -10,12 +10,14 @@ This guide shows how to deploy the TBRS SvelteKit app on a Raspberry Pi using Do
 ## Quick Start
 
 1. **Clone and navigate to the project:**
+
    ```bash
    git clone <your-repo-url>
    cd tbrs
    ```
 
 2. **Build and run with Docker Compose:**
+
    ```bash
    docker-compose up -d
    ```
@@ -27,26 +29,31 @@ This guide shows how to deploy the TBRS SvelteKit app on a Raspberry Pi using Do
 ## Docker Commands
 
 ### Build the image:
+
 ```bash
 docker build -t tbrs-app .
 ```
 
 ### Run the container:
+
 ```bash
 docker run -p 8090:3000 tbrs-app
 ```
 
 ### View logs:
+
 ```bash
 docker-compose logs -f
 ```
 
 ### Stop the app:
+
 ```bash
 docker-compose down
 ```
 
 ### Update the app:
+
 ```bash
 git pull
 docker-compose down
@@ -56,6 +63,7 @@ docker-compose up -d --build
 ## Configuration
 
 ### Environment Variables
+
 You can customize the app by setting environment variables in `docker-compose.yml`:
 
 ```yaml
@@ -66,15 +74,18 @@ environment:
 ```
 
 ### Port Configuration
+
 To change the port, modify the `ports` section in `docker-compose.yml`:
+
 ```yaml
 ports:
-  - "8090:3000"  # Maps host port 8090 to container port 3000
+  - '8090:3000' # Maps host port 8090 to container port 3000
 ```
 
 ## Resource Limits
 
 The Docker Compose file includes resource limits suitable for Raspberry Pi:
+
 - Memory: 512MB
 - CPU: 0.5 cores
 
@@ -91,21 +102,25 @@ docker-compose ps
 ## Troubleshooting
 
 ### Check if the container is running:
+
 ```bash
 docker ps
 ```
 
 ### View container logs:
+
 ```bash
 docker-compose logs tbrs-app
 ```
 
 ### Access container shell:
+
 ```bash
 docker-compose exec tbrs-app sh
 ```
 
 ### Restart the service:
+
 ```bash
 docker-compose restart
 ```
@@ -127,4 +142,4 @@ npm install
 npm run dev
 ```
 
-This will start the development server on `http://localhost:5173`. 
+This will start the development server on `http://localhost:5173`.

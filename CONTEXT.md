@@ -78,4 +78,4 @@ The following tasks outline the migration from Google Forms/Sheets to a self-hos
 - Use `npm run dev` to start locally.
 - Use scripts in `scripts/` for versioning and dev toggles.
 - PRs and issues welcome!
-- **When you commit, run `make bump-patch` before pushing.** 
+- **When you commit, run `make bump-patch` before pushing.**
