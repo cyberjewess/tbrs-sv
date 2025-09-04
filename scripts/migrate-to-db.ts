@@ -2,7 +2,7 @@ import { addEvent } from '../src/lib/db/events.js';
 import { addSong } from '../src/lib/db/songs.js';
 import { events } from '../src/lib/data/events.js';
 import { songs } from '../src/lib/data/songs.js';
-import { getDatabase, closeDatabase } from '../src/lib/db/connection.js';
+import { closeDatabase } from '../src/lib/db/connection.js';
 
 console.log('Starting migration...');
 
