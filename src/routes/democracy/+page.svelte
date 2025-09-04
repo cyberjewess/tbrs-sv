@@ -1,8 +1,8 @@
 <script lang="ts">
-	const form = {
-		link: 'https://forms.gle/78Dpnps5FQD985an7',
-		display: 'Name our community!'
-	};
+	// const form = {
+	// 	link: 'https://forms.gle/78Dpnps5FQD985an7',
+	// 	display: 'Name our community!'
+	// };
 </script>
 
 <h1>Suggest</h1>

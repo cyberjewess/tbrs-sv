@@ -13,7 +13,7 @@
 </script>
 
 <ul>
-	{#each events as event}
+	{#each events as event, idx (event.date + ':' + event.title + ':' + idx)}
 		<li>
 			<div class="event-item">
 				{#if !event.hideDate}

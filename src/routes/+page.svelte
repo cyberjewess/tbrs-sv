@@ -1,10 +1,8 @@
 <script lang="ts">
-	import { getUpcomingEvents, toDate, todayISO } from '$lib/api/events';
+	import { getUpcomingEvents, toDate } from '$lib/api/events';
 	import { onMount } from 'svelte';
 
-	const today = todayISO();
-	let upcomingEvents: any[] = [];
-	let loading = true;
+	let upcomingEvents: Array<{ date: string; title: string; isHeadline?: boolean }> = [];
 
 	onMount(async () => {
 		try {
@@ -13,7 +11,7 @@
 		} catch (error) {
 			console.error('Failed to load events:', error);
 		} finally {
-			loading = false;
+			// no-op
 		}
 	});
 	const headlineEvent = upcomingEvents.filter((e) => e.isHeadline).pop();

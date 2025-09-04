@@ -43,7 +43,7 @@
 		<p>No events found.</p>
 	{:else}
 		<div class="events-list">
-			{#each events as event, index}
+			{#each events as event, index (event.date + ':' + event.title + ':' + index)}
 				<div class="event-card">
 					<div class="event-header">
 						<h3>{event.title}</h3>

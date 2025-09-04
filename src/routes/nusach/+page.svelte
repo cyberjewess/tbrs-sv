@@ -42,10 +42,10 @@
 	{#if loading}
 		<p>Loading songs...</p>
 	{:else}
-		{#each categories as category}
+		{#each categories as category, idx (category.key + ':' + idx)}
 			<h2>{category.title}</h2>
 			<ul>
-				{#each getSongsByCategory(category.key) as song}
+				{#each getSongsByCategory(category.key) as song (song.title + ':' + (song.artist ?? ''))}
 					<li>
 						<a target="_blank" href={song.externalLink}>
 							{song.title}{song.artist ? ` - ${song.artist}` : ''}
