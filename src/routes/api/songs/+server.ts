@@ -1,11 +1,12 @@
 import { json } from '@sveltejs/kit';
 import type { RequestHandler } from './$types';
+import type { Song } from '$lib/types';
 import { getAllSongs, getSongsByCategory, addSong, updateSong, deleteSong } from '$lib/db/songs';
 
 export const GET: RequestHandler = async ({ url }) => {
 	try {
 		const category = url.searchParams.get('category');
-		const songs = category ? getSongsByCategory(category as any) : getAllSongs();
+		const songs = category ? getSongsByCategory(category as Song['category']) : getAllSongs();
 		return json(songs);
 	} catch (error) {
 		console.error('Failed to fetch songs:', error);
