@@ -39,7 +39,7 @@ export const events: Event[] = [
 	{ date: '2025-09-28', title: 'Tashlich', isHeadline: true },
 	{ date: '2025-09-23', title: 'Rosh Hashana feast @ Esti', isHeadline: true },
 	{ date: '2025-09-22', title: 'Erev Rosh Hashana' },
-	{ date: '2025-09-12', title: 'Shabbat @ Esti', isHeadline: true },
+	{ date: '2025-09-12', title: 'Shabbos @ Esti', isHeadline: true },
 	{ date: '2025-08-30', title: 'Havdalah @ Irving Sq. Park', isHeadline: true },
 	{ date: '2025-08-15', title: 'Shabbos @ Esti', isHeadline: true },
 	{ date: '2025-08-09', title: "Tu B'Av" },
