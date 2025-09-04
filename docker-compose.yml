@@ -10,6 +10,8 @@ services:
       - PORT=3000
       - HOSTNAME=0.0.0.0
     restart: unless-stopped
+    volumes:
+      - ./data:/app/data
     # For Raspberry Pi, you might want to add resource limits
     deploy:
       resources:
