@@ -19,6 +19,6 @@
 		href={link}
 	>
 		<h3>Click if not automatically redirected</h3>
-		<h3>Havdalah Potluck Spreadsheet August 30</h3>
+		<h3>Shabbos Potluck Spreadsheet September 12</h3>
 	</a>
 </div>
