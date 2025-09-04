@@ -293,7 +293,7 @@ a.button.archive-big {
 	padding: 30px 20px;
 }
 
-.calendar-card+.calendar-card {
+.calendar-card + .calendar-card {
 	margin-top: 40px;
 }
 
@@ -324,7 +324,7 @@ a.button.archive-big {
 	padding: 30px 20px;
 }
 
-.vote-card+.vote-card {
+.vote-card + .vote-card {
 	margin-top: 40px;
 }
 
