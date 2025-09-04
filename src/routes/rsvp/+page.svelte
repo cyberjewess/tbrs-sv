@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 
-	const link = 'https://forms.gle/NwPwEniuCtaBvpbs9';
+	const link = 'https://forms.gle/ZophtMqztfFTKtZHA';
 
 	onMount(() => {
 		setTimeout(() => {

@@ -2,7 +2,7 @@
 	import { onMount } from 'svelte';
 
 	const link =
-		'https://docs.google.com/spreadsheets/d/1vDMRb8MIKSB56HxzfjWuAV0IgZWBG_Sj3NiMc83qN6I/edit?usp=sharing';
+		'https://docs.google.com/spreadsheets/d/1_PUO9lCUdxk2L6mG8cJ9VegkGY3eaAgwez3vy0KNX5E/edit?usp=sharing';
 
 	onMount(() => {
 		// Redirect to Google Spreadsheet after a short delay
