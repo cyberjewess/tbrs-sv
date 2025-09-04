@@ -2,14 +2,16 @@
 	import type { EventHandler } from 'svelte/elements';
 	import { todayISO, addEvent } from '$lib/api/events';
 
-	const extractFormData = (event: any) => {
-		const data = new FormData(event.currentTarget);
+	const extractFormData = (form: HTMLFormElement) => {
+		const data = new FormData(form);
 		return Object.fromEntries(data.entries());
 	};
 
 	const onSubmit: EventHandler = (event) => {
 		event.preventDefault();
-		const formData = extractFormData(event);
+		const form = event.currentTarget as HTMLFormElement;
+		if (!form) return;
+		const formData = extractFormData(form);
 
 		try {
 			addEvent({
