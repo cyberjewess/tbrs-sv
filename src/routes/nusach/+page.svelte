@@ -7,11 +7,17 @@
 	let loading = true;
 
 	onMount(async () => {
+		const startTime = Date.now();
+		const minLoadingTime = 300; // Minimum 300ms loading time
 		try {
 			songs = await getAllSongs();
 		} catch (error) {
 			console.error('Failed to load songs:', error);
 		} finally {
+			const elapsed = Date.now() - startTime;
+			if (elapsed < minLoadingTime) {
+				await new Promise((resolve) => setTimeout(resolve, minLoadingTime - elapsed));
+			}
 			loading = false;
 		}
 	});
