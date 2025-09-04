@@ -1,6 +1,24 @@
 <script lang="ts">
 	import type { Song } from '$lib/types';
-	import { songs } from '$lib/data/songs';
+	import { getAllSongs } from '$lib/api/songs';
+	import { onMount } from 'svelte';
+
+	let songs: Song[] = [];
+	let loading = true;
+
+	onMount(async () => {
+		try {
+			songs = await getAllSongs();
+		} catch (error) {
+			console.error('Failed to load songs:', error);
+		} finally {
+			loading = false;
+		}
+	});
+
+	function getSongsByCategory(category: Song['category']): Song[] {
+		return songs.filter((song) => song.category === category);
+	}
 
 	const categories = [
 		{ key: 'kabbalat-shabbat', title: 'Kabbalat Shabbat' },
@@ -9,10 +27,6 @@
 		{ key: 'yiddish', title: 'Yiddish' },
 		{ key: 'other', title: 'Other' }
 	] as const;
-
-	function getSongsByCategory(category: Song['category']): Song[] {
-		return songs.filter((song) => song.category === category);
-	}
 </script>
 
 <div class="home">
@@ -25,16 +39,20 @@
 		>
 	</h2>
 
-	{#each categories as category}
-		<h2>{category.title}</h2>
-		<ul>
-			{#each getSongsByCategory(category.key) as song}
-				<li>
-					<a target="_blank" href={song.externalLink}>
-						{song.title}{song.artist ? ` - ${song.artist}` : ''}
-					</a>
-				</li>
-			{/each}
-		</ul>
-	{/each}
+	{#if loading}
+		<p>Loading songs...</p>
+	{:else}
+		{#each categories as category}
+			<h2>{category.title}</h2>
+			<ul>
+				{#each getSongsByCategory(category.key) as song}
+					<li>
+						<a target="_blank" href={song.externalLink}>
+							{song.title}{song.artist ? ` - ${song.artist}` : ''}
+						</a>
+					</li>
+				{/each}
+			</ul>
+		{/each}
+	{/if}
 </div>

@@ -1,11 +1,21 @@
 <script lang="ts">
-	import { events, toDate, todayISO } from '$lib/data/events';
+	import { getUpcomingEvents, toDate, todayISO } from '$lib/api/events';
+	import { onMount } from 'svelte';
 
 	const today = todayISO();
+	let upcomingEvents: any[] = [];
+	let loading = true;
 
-	const upcomingEvents = events
-		.filter((e) => e.date >= today)
-		.sort((a, b) => b.date.localeCompare(a.date));
+	onMount(async () => {
+		try {
+			upcomingEvents = await getUpcomingEvents();
+			upcomingEvents = upcomingEvents.sort((a, b) => b.date.localeCompare(a.date));
+		} catch (error) {
+			console.error('Failed to load events:', error);
+		} finally {
+			loading = false;
+		}
+	});
 	const headlineEvent = upcomingEvents.filter((e) => e.isHeadline).pop();
 	const otherEvent = upcomingEvents.filter((e) => !e.isHeadline).pop();
 
