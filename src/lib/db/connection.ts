@@ -5,8 +5,8 @@ import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-// Database will be stored in the project root
-const dbPath = path.join(__dirname, '../../..', 'tbrs.db');
+// Database will be stored in the data directory (mounted volume in Docker)
+const dbPath = path.join(__dirname, '../../..', 'data', 'tbrs.db');
 
 let db: Database.Database | null = null;
 

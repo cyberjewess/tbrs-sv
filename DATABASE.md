@@ -55,9 +55,10 @@ This project now uses SQLite instead of static TypeScript files for data storage
 
 ### Database Location
 
-- Database file: `tbrs.db` (in project root)
+- Database file: `data/tbrs.db` (in data directory)
 - Automatically created on first run
 - Added to `.gitignore` to avoid committing data
+- In Docker: mounted as volume to persist between container restarts
 
 ## Architecture
 
