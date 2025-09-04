@@ -1,15 +1,22 @@
 import type { Song } from '../types';
 import { getDatabase } from './connection';
 
+type DbSongRow = {
+	title: string;
+	artist?: string | null;
+	category: Song['category'];
+	externalLink: string;
+};
+
 export function getAllSongs(): Song[] {
 	const db = getDatabase();
 	const stmt = db.prepare('SELECT * FROM songs ORDER BY category, title');
-	const rows = stmt.all() as any[];
+	const rows = stmt.all() as DbSongRow[];
 
 	return rows.map((row) => ({
 		title: row.title,
-		artist: row.artist,
-		category: row.category as Song['category'],
+		artist: row.artist ?? undefined,
+		category: row.category,
 		externalLink: row.externalLink
 	}));
 }
@@ -17,12 +24,12 @@ export function getAllSongs(): Song[] {
 export function getSongsByCategory(category: Song['category']): Song[] {
 	const db = getDatabase();
 	const stmt = db.prepare('SELECT * FROM songs WHERE category = ? ORDER BY title');
-	const rows = stmt.all(category) as any[];
+	const rows = stmt.all(category) as DbSongRow[];
 
 	return rows.map((row) => ({
 		title: row.title,
-		artist: row.artist,
-		category: row.category as Song['category'],
+		artist: row.artist ?? undefined,
+		category: row.category,
 		externalLink: row.externalLink
 	}));
 }

@@ -1,6 +1,16 @@
 import type { Event } from '../types';
 import { getDatabase } from './connection';
 
+type DbEventRow = {
+	date: string;
+	title: string;
+	description?: string | null;
+	isHeadline?: number | boolean | null;
+	isMystical?: number | boolean | null;
+	externalLink?: string | null;
+	hideDate?: number | boolean | null;
+};
+
 export function todayISO(): string {
 	const now = new Date();
 	now.setHours(0, 0, 0, 0);
@@ -26,15 +36,15 @@ export function toDate(s?: string): string {
 export function getAllEvents(): Event[] {
 	const db = getDatabase();
 	const stmt = db.prepare('SELECT * FROM events ORDER BY date DESC');
-	const rows = stmt.all() as any[];
+	const rows = stmt.all() as DbEventRow[];
 
 	return rows.map((row) => ({
 		date: row.date,
 		title: row.title,
-		description: row.description,
+		description: row.description ?? undefined,
 		isHeadline: Boolean(row.isHeadline),
 		isMystical: Boolean(row.isMystical),
-		externalLink: row.externalLink,
+		externalLink: row.externalLink ?? undefined,
 		hideDate: Boolean(row.hideDate)
 	}));
 }
@@ -43,15 +53,15 @@ export function getUpcomingEvents(): Event[] {
 	const today = todayISO();
 	const db = getDatabase();
 	const stmt = db.prepare('SELECT * FROM events WHERE date >= ? ORDER BY date ASC');
-	const rows = stmt.all(today) as any[];
+	const rows = stmt.all(today) as DbEventRow[];
 
 	return rows.map((row) => ({
 		date: row.date,
 		title: row.title,
-		description: row.description,
+		description: row.description ?? undefined,
 		isHeadline: Boolean(row.isHeadline),
 		isMystical: Boolean(row.isMystical),
-		externalLink: row.externalLink,
+		externalLink: row.externalLink ?? undefined,
 		hideDate: Boolean(row.hideDate)
 	}));
 }
