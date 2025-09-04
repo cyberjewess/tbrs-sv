@@ -19,6 +19,7 @@
 	<a href="/archive/" class="button">Archive</a>
 	{#if developerMode}
 		<a href="/events/" class="button">Events WIP</a>
+		<a href="/admin/" class="button">Admin</a>
 	{/if}
 </div>
 
