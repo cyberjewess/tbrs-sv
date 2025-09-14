@@ -54,7 +54,7 @@
 					<a target="_blank" href="/potluck"> Potluck Spreadsheet </a>
 				</h3>
 			</div>
-			<h2>Services at 6:30pm. Dinner by 8:00pm.</h2>
+			<h2>Dinner at 7:00pm.</h2>
 			<div>
 				{#if otherEvent}
 					<h3 class="mystical">{otherEvent.title} {otherDate}</h3>

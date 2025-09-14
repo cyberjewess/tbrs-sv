@@ -2,7 +2,7 @@
 	import { onMount } from 'svelte';
 
 	const link =
-		'https://docs.google.com/spreadsheets/d/1_PUO9lCUdxk2L6mG8cJ9VegkGY3eaAgwez3vy0KNX5E/edit?usp=sharing';
+		'https://docs.google.com/spreadsheets/d/1Mx9EsLQdcULbUlTNp_NGBMHnYuM1Pze5-NqnhViULZM/edit?usp=sharing';
 
 	onMount(() => {
 		// Redirect to Google Spreadsheet after a short delay
@@ -19,6 +19,6 @@
 		href={link}
 	>
 		<h3>Click if not automatically redirected</h3>
-		<h3>Shabbos Potluck Spreadsheet September 12</h3>
+		<h3>Rosh Hashana Potluck Spreadsheet September 23</h3>
 	</a>
 </div>
