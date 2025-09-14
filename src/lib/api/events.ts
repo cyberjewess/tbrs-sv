@@ -12,14 +12,11 @@ export function toDate(s?: string): string {
 	}
 	const [y, m, d] = s.split('-').map((a) => Number.parseInt(a));
 	const r = new Date(y, m - 1, d);
-	return (
-		'on ' +
-		r.toLocaleDateString('en-US', {
-			year: 'numeric',
-			month: 'long',
-			day: 'numeric'
-		})
-	);
+	return r.toLocaleDateString('en-US', {
+		year: 'numeric',
+		month: 'long',
+		day: 'numeric'
+	});
 }
 
 export async function getAllEvents(): Promise<Event[]> {
