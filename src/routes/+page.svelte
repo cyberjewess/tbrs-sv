@@ -45,7 +45,7 @@
 		{#if loading}
 			<h2>Loading...</h2>
 		{:else}
-			<h2>{headlineText} on {headlineDate}.</h2>
+			<h2>Next: {headlineText} on {headlineDate}.</h2>
 			<div class="event-links">
 				<h3 class="event-link">
 					<a target="_blank" href="https://tinyurl.com/azyk25"> Eilah Atah </a>
@@ -54,7 +54,7 @@
 					<a target="_blank" href="/rsvp"> Sukkot Events 10/10 RSVP</a>
 				</h3>
 			</div>
-			<h2>Dinner at 7:00pm.</h2>
+			<h2>Eilah Atah begins at 8:30am.</h2>
 			<div>
 				{#if otherEvent}
 					<h3 class="mystical">{otherEvent.title} {otherDate}</h3>
