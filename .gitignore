@@ -26,5 +26,5 @@ vite.config.ts.timestamp-*
 .vscode/
 
 # Database
-*.db
+tbrs.db*
 data/
