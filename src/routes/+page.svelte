@@ -22,16 +22,22 @@
 			loading = false;
 		}
 	});
-	let headlineEvent: { date: string; title: string; isHeadline?: boolean } | undefined;
-	let otherEvent: { date: string; title: string; isHeadline?: boolean } | undefined;
+	let headlineEvent:
+		| { date: string; title: string; description?: string; isHeadline?: boolean }
+		| undefined;
+	let otherEvent:
+		| { date: string; title: string; description?: string; isHeadline?: boolean }
+		| undefined;
 	$: headlineEvent = upcomingEvents.filter((e) => e.isHeadline).pop();
 	$: otherEvent = upcomingEvents.filter((e) => !e.isHeadline).pop();
 
 	// Extract shabbos text because the isShabbos flag just makes it a top level event
 	// It could be a Havdalah as on 8/30/25
-	let headlineText: string;
+	let headlineTitle: string;
+	let headlineDescription: string;
 	let headlineDate: string;
-	$: headlineText = headlineEvent?.title ?? 'Error! Let Esti know';
+	$: headlineTitle = headlineEvent?.title ?? 'Error! Let Esti know';
+	$: headlineDescription = headlineEvent?.description ?? 'Tell Esti to add an event description';
 	$: headlineDate = toDate(headlineEvent?.date);
 
 	let otherDate: string;
@@ -45,7 +51,7 @@
 		{#if loading}
 			<h2>Loading...</h2>
 		{:else}
-			<h2>Next: {headlineText} on {headlineDate}.</h2>
+			<h2>Next: {headlineTitle} on {headlineDate}.</h2>
 			<div class="event-links">
 				<h3 class="event-link">
 					<a target="_blank" href="https://tinyurl.com/azyk25"> Eilah Atah </a>
@@ -54,7 +60,7 @@
 					<a target="_blank" href="/rsvp"> Sukkot Events 10/10 RSVP</a>
 				</h3>
 			</div>
-			<h2>Eilah Atah begins at 8:30am.</h2>
+			<h2>{headlineDescription}</h2>
 			<div>
 				{#if otherEvent}
 					<h3 class="mystical">{otherEvent.title} {otherDate}</h3>
