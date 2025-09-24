@@ -1,17 +1,17 @@
 import { json } from '@sveltejs/kit';
 import type { RequestHandler } from './$types';
 import {
-	getAllEvents,
-	getUpcomingEvents,
-	addEvent,
-	updateEvent,
-	deleteEvent
+	getAllEventsFromDb,
+	getUpcomingEventsFromDb,
+	addEventToDb,
+	updateEventInDb,
+	deleteEventFromDb
 } from '$lib/db/events';
 
 export const GET: RequestHandler = async ({ url }) => {
 	try {
 		const upcoming = url.searchParams.get('upcoming') === 'true';
-		const events = upcoming ? getUpcomingEvents() : getAllEvents();
+		const events = upcoming ? getUpcomingEventsFromDb() : getAllEventsFromDb();
 		return json(events);
 	} catch (error) {
 		console.error('Failed to fetch events:', error);
@@ -22,7 +22,7 @@ export const GET: RequestHandler = async ({ url }) => {
 export const POST: RequestHandler = async ({ request }) => {
 	try {
 		const event = await request.json();
-		addEvent(event);
+		addEventToDb(event);
 		return json({ success: true });
 	} catch (error) {
 		console.error('Failed to add event:', error);
@@ -37,7 +37,7 @@ export const PUT: RequestHandler = async ({ request, url }) => {
 			return json({ error: 'Missing event ID' }, { status: 400 });
 		}
 		const event = await request.json();
-		updateEvent(parseInt(id), event);
+		updateEventInDb(parseInt(id), event);
 		return json({ success: true });
 	} catch (error) {
 		console.error('Failed to update event:', error);
@@ -51,7 +51,7 @@ export const DELETE: RequestHandler = async ({ url }) => {
 		if (!id) {
 			return json({ error: 'Missing event ID' }, { status: 400 });
 		}
-		deleteEvent(parseInt(id));
+		deleteEventFromDb(parseInt(id));
 		return json({ success: true });
 	} catch (error) {
 		console.error('Failed to delete event:', error);

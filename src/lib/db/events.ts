@@ -33,7 +33,7 @@ export function toDate(s?: string): string {
 	);
 }
 
-export function getAllEvents(): Event[] {
+export function getAllEventsFromDb(): Event[] {
 	const db = getDatabase();
 	const stmt = db.prepare('SELECT * FROM events ORDER BY date DESC');
 	const rows = stmt.all() as DbEventRow[];
@@ -49,7 +49,7 @@ export function getAllEvents(): Event[] {
 	}));
 }
 
-export function getUpcomingEvents(): Event[] {
+export function getUpcomingEventsFromDb(): Event[] {
 	const today = todayISO();
 	const db = getDatabase();
 	const stmt = db.prepare('SELECT * FROM events WHERE date >= ? ORDER BY date ASC');
@@ -66,7 +66,7 @@ export function getUpcomingEvents(): Event[] {
 	}));
 }
 
-export function addEvent(event: Omit<Event, 'id'>): void {
+export function addEventToDb(event: Omit<Event, 'id'>): void {
 	const db = getDatabase();
 	const stmt = db.prepare(`
         INSERT INTO events (date, title, description, isHeadline, isMystical, externalLink, hideDate)
@@ -84,7 +84,7 @@ export function addEvent(event: Omit<Event, 'id'>): void {
 	);
 }
 
-export function updateEvent(id: number, event: Partial<Event>): void {
+export function updateEventInDb(id: number, event: Partial<Event>): void {
 	const db = getDatabase();
 	const stmt = db.prepare(`
         UPDATE events 
@@ -104,7 +104,7 @@ export function updateEvent(id: number, event: Partial<Event>): void {
 	);
 }
 
-export function deleteEvent(id: number): void {
+export function deleteEventFromDb(id: number): void {
 	const db = getDatabase();
 	const stmt = db.prepare('DELETE FROM events WHERE id = ?');
 	stmt.run(id);
