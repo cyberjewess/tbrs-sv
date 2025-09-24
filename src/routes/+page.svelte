@@ -57,7 +57,7 @@
 					<a target="_blank" href="https://tinyurl.com/azyk25"> Eilah Atah </a>
 				</h3>
 				<h3 class="event-link">
-					<a target="_blank" href="/rsvp"> Sukkot Events 10/10 RSVP</a>
+					<a target="_blank" href="/rsvp"> Sukkot Events 10/5-10/10 RSVP</a>
 				</h3>
 			</div>
 			<h2>{headlineDescription}</h2>
