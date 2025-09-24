@@ -1,4 +1,4 @@
-import { addEvent } from '../src/lib/db/events.js';
+import { addEventToDb } from '../src/lib/db/events.js';
 import { addSong } from '../src/lib/db/songs.js';
 import { events } from '../src/lib/data/events.js';
 import { songs } from '../src/lib/data/songs.js';
@@ -10,7 +10,7 @@ try {
 	// Migrate events
 	console.log('Migrating events...');
 	for (const event of events) {
-		addEvent(event);
+		addEventToDb(event);
 		console.log(`Added event: ${event.title}`);
 	}
 
