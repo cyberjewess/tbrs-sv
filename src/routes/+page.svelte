@@ -48,10 +48,10 @@
 			<h2>{headlineText} on {headlineDate}.</h2>
 			<div class="event-links">
 				<h3 class="event-link">
-					<a target="_blank" href="/rsvp"> RSVP Form </a>
+					<a target="_blank" href="https://tinyurl.com/azyk25"> Eilah Atah </a>
 				</h3>
 				<h3 class="event-link">
-					<a target="_blank" href="/potluck"> Potluck Spreadsheet </a>
+					<a target="_blank" href="/rsvp"> Sukkot Events 10/10 RSVP</a>
 				</h3>
 			</div>
 			<h2>Dinner at 7:00pm.</h2>
