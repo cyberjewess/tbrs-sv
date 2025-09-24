@@ -51,7 +51,7 @@
 		{#if loading}
 			<h2>Loading...</h2>
 		{:else}
-			<h2>Next: {headlineTitle} on {headlineDate}.</h2>
+			<h2>{headlineTitle} on {headlineDate}.</h2>
 			<div class="event-links">
 				<h3 class="event-link">
 					<a target="_blank" href="https://tinyurl.com/azyk25"> Eilah Atah </a>
