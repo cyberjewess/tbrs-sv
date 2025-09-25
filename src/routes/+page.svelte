@@ -72,7 +72,7 @@
 	<div class="principles">
 		<p>An intergenerational Jewish community.</p>
 		<p>We are Liberationist Diasporist Anarchist <strong>dreamers.</strong></p>
-		<p>We are Anti-Zionist Anti-Implerialist Anti-Colonialist <strong>fighters.</strong></p>
+		<p>We are Anti-Zionist Anti-Imperialist Anti-Colonialist <strong>fighters.</strong></p>
 		<p>We do monthly trad-egal style Shabbos services <strong>with a potluck dinner.</strong></p>
 		<p>In order to rest, renew, and connect.</p>
 	</div>
